@@ -4,6 +4,7 @@
 
 - Work: Gotify logo (`Assets/logo.png`, `Assets/gotify.ico`).
 - Attribution: Gotify project and contributors.
+- Original Go gopher design: Renee French (https://reneefrench.blogspot.com/), credited by the upstream Gotify logo project.
 - Original: https://github.com/gotify/logo and https://gotify.net/img/logo.png
 - License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 - License URL: https://creativecommons.org/licenses/by/4.0/
