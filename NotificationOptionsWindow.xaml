@@ -1,0 +1,15 @@
+<Window x:Class="GotifyDesktop.NotificationOptionsWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="提醒策略" Width="520" SizeToContent="Height" ResizeMode="NoResize" Background="{DynamicResource PageBrush}" Foreground="{DynamicResource TextBrush}" FontFamily="Microsoft YaHei UI" WindowStartupLocation="CenterOwner">
+ <Border Background="{DynamicResource PageBrush}" Padding="22"><StackPanel>
+  <TextBlock Text="防刷屏与免打扰" FontSize="20" FontWeight="SemiBold" Margin="0,0,0,20"/>
+  <CheckBox x:Name="AggregateCheck" Content="合并同一应用短时间内的提醒"/>
+  <TextBlock Text="首条立即提醒，10 秒内的后续消息合成一次摘要。消息列表仍保留每一条原始消息。" TextWrapping="Wrap" Foreground="{DynamicResource MutedBrush}" Margin="22,7,0,20"/>
+  <CheckBox x:Name="QuietCheck" Content="启用定时免打扰"/>
+  <StackPanel Orientation="Horizontal" Margin="22,12,0,10"><TextBlock Text="从" VerticalAlignment="Center" Margin="0,0,10,0"/><TextBox x:Name="QuietStartBox" Width="90" AutomationProperties.Name="免打扰开始时间"/><TextBlock Text="至" VerticalAlignment="Center" Margin="12,0"/><TextBox x:Name="QuietEndBox" Width="90" AutomationProperties.Name="免打扰结束时间"/><TextBlock Text="本地时间" VerticalAlignment="Center" Foreground="{DynamicResource MutedBrush}" Margin="12,0,0,0"/></StackPanel>
+  <TextBlock Text="24 小时制，例如 22:00 至 08:00；支持跨午夜。时段结束后不补发期间的提醒，消息仍正常接收。" TextWrapping="Wrap" Foreground="{DynamicResource MutedBrush}" Margin="22,0,0,12"/>
+  <CheckBox x:Name="CriticalCheck" Content="免打扰期间仍允许优先级 10 提醒" Margin="22,0,0,20"/>
+  <TextBlock Text="应用通知开关和托盘“暂停通知”始终有效。应用本身的提醒仍仅限优先级 8～10。" TextWrapping="Wrap" Foreground="{DynamicResource MutedBrush}" Margin="0,0,0,12"/>
+  <TextBlock x:Name="OptionsErrorLabel" TextWrapping="Wrap" Foreground="{DynamicResource DangerBrush}" Visibility="Collapsed" Margin="0,0,0,12"/>
+  <TextBlock Text="应用后，请在设置页点击“保存”。" Foreground="{DynamicResource MutedBrush}" FontSize="11" Margin="0,0,0,12"/>
+  <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"><Button Content="取消" IsCancel="True" Margin="0,0,8,0"/><Button Content="应用到设置" Click="Save_Click" IsDefault="True" Style="{StaticResource PrimaryButton}"/></StackPanel>
+ </StackPanel></Border>
+</Window>

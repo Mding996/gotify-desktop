@@ -1,0 +1,16 @@
+<Window x:Class="GotifyDesktop.SettingsWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Gotify 设置" SizeToContent="Height" Width="510" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Background="{DynamicResource PageBrush}" Foreground="{DynamicResource TextBrush}" FontFamily="Microsoft YaHei UI">
+  <StackPanel Margin="22" Background="{DynamicResource PageBrush}"><TextBlock Text="连接设置" FontSize="20" FontWeight="SemiBold" Margin="0,0,0,16"/>
+    <TextBlock Text="服务器地址"/><TextBox x:Name="ServerBox" Margin="0,5,0,5" Padding="8" ToolTip="填写你自己的 Gotify 地址，例如 https://gotify.example.com"/><TextBlock Text="首次使用请填写自己的 Gotify 服务；本应用不提供公共服务器。" TextWrapping="Wrap" Foreground="{DynamicResource MutedBrush}" Margin="0,0,0,12"/>
+    <TextBlock Text="Client Token（接收消息）"/><PasswordBox x:Name="ClientBox" Margin="0,5,0,12" Padding="8"/>
+    <TextBlock Text="Application Token（发送消息）"/><PasswordBox x:Name="ApplicationBox" Margin="0,5,0,12" Padding="8"/>
+    <CheckBox x:Name="NotificationsCheck" Content="默认启用 Windows 通知（仅优先级 8～10）" Margin="0,5,0,10"/>
+    <Button Content="按应用设置提醒…" Click="ApplicationNotifications_Click" HorizontalAlignment="Left" Padding="10,6" Margin="0,0,0,10"/>
+    <Button Content="提醒策略（防刷屏 / 免打扰）…" Click="NotificationOptions_Click" HorizontalAlignment="Left" Padding="10,6" Margin="0,0,0,10"/>
+    <Button Content="测试 Windows 通知" Click="TestNotification_Click" HorizontalAlignment="Left" Padding="10,6" Margin="0,0,0,12"/>
+    <CheckBox x:Name="StartupCheck" Content="登录 Windows 时自动启动" Margin="0,0,0,18"/>
+    <TextBlock Text="界面主题"/><ComboBox x:Name="ThemeBox" Margin="0,5,0,14"><ComboBoxItem Content="浅色"/><ComboBoxItem Content="深色"/></ComboBox><TextBlock Text="Token 使用 Windows DPAPI 加密后保存在当前用户配置中。" Foreground="{DynamicResource MutedBrush}" TextWrapping="Wrap" Margin="0,0,0,16"/>
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"><Button Content="取消" IsCancel="True" Padding="18,7" Margin="0,0,8,0"/><Button Content="保存" IsDefault="True" Click="Save_Click" Padding="20,7" Style="{StaticResource PrimaryButton}"/></StackPanel>
+  </StackPanel>
+</Window>
+
+

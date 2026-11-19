@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": [
+    "All clipboard formats backed up in memory before changes",
+    "Cold helper preserves leading zeros and clipboard data persists after exit",
+    "Copy-only startup loads no WPF/Forms and creates no main window",
+    "Each notification copies its own immutable snapshot",
+    "Clipboard opened for contention test",
+    "Busy clipboard fails without overwriting data",
+    "Missing snapshots never overwrite the clipboard",
+    "Windows protocol reaches the public copy-only entry without starting the main application",
+    "Previous clipboard restored; no clipboard contents included in reports"
+  ],
+  "error": null
+}

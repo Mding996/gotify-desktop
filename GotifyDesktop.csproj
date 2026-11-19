@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>GotifyDesktop</AssemblyName>
+    <RootNamespace>GotifyDesktop</RootNamespace>
+    <ApplicationIcon>Assets\gotify.ico</ApplicationIcon>
+    <Version>1.8.1</Version>
+    <StartupObject>GotifyDesktop.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="GotifyDesktop.Tests" />
+    <Resource Include="Assets\gotify.ico" />
+    <Resource Include="Assets\logo.png" />
+    <EmbeddedResource Include="LICENSE;THIRD_PARTY_NOTICES.md;licenses\**\*" />
+  </ItemGroup>
+</Project>
+
+
+
